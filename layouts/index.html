@@ -1,0 +1,86 @@
+{{ define "main" }}
+
+<h1>About</h1>
+
+<p>
+👋 Hi, I'm Purple, who is crypto native and passionate from non-tech turning to tech, designer and independent reporter as well. This is my personal portfolio and blogs where I share my work and thoughts.
+<a href="about/">(more)</a>
+</p>
+<br/>
+
+<h1>Latest posts</h1>
+
+<div class="posts-list">
+{{ with .Site.GetPage "/posts" }}
+    {{ range first 3 (sort .Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+        <div class="post">
+            <p>
+                <div class="date">{{ .Date | time.Format ":date_medium" }}</div>
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                {{ .Summary }}
+            </p>
+        </div>    
+    {{ end }}
+{{ end }}
+</div>
+
+<h1>Latest portfolio</h1>
+
+<!-- 修改开始：添加portfolio网格容器 -->
+<div class="portfolio-grid">
+  {{ with .Site.GetPage "/posters" }}
+    {{ range first 3 (sort .Pages "Date" "desc")}}
+      <div class="portfolio-item">
+        {{ if and (isset .Params "image") .Params.image }}
+          <a href="{{ .Permalink }}" class="portfolio-link">
+            {{ $imgName := .Params.image }}
+            {{ $image := resources.Get (printf "images/%s" $imgName) }}
+            
+            <!-- 如果找不到，尝试直接匹配 -->
+            {{ if not $image }}
+              {{ $image = resources.GetMatch (printf "*%s*" $imgName) }}
+            {{ end }}
+            
+            {{ if $image }}
+              {{ $thumb := $image.Resize "400x" }}
+              <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="portfolio-image">
+            {{ else }}
+              <div class="image-error">
+                Image not found: {{ $imgName }}<br>
+                Tried paths: 
+                <ul>
+                  <li>images/{{ $imgName }}</li>
+                  <li>*/{{ $imgName }}*</li>
+                </ul>
+                
+                <!-- 添加资源列表调试 -->
+                Available images:
+                <ul>
+                  {{ range resources.Match "images/*" }}
+                    <li>{{ .Name }} ({{ .ResourceType }})</li>
+                  {{ end }}
+                </ul>
+              </div>
+            {{ end }}
+            
+            <div class="portfolio-overlay">
+              <h3>{{ .Title }}</h3>
+              {{ with .Params.caption }}<p>{{ . }}</p>{{ end }}
+              
+              {{ if .Params.categories }}
+                <div class="portfolio-tags">
+                  {{ range .Params.categories }}
+                    <span class="tag">{{ . }}</span>
+                  {{ end }}
+                </div>
+              {{ end }}
+            </div>
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+<!-- 修改结束 -->
+
+{{ end }}

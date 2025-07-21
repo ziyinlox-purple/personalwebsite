@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome to My Portfolio on Portfolio of Purple</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Welcome to My Portfolio on Portfolio of Purple</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posters/zkp-lattice/</link>
+      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posters/zkp-lattice/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posters/zkp-zkvm/</link>
+      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posters/zkp-zkvm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Fri, 18 Jul 2025 02:03:51 +0800</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;👋 Hi, I&amp;rsquo;m Purple, who is crypto native and passionate from non-tech turning to tech, designer and independent reporter as well. This is my personal portfolio and blogs where I share my work and thoughts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Fri, 18 Jul 2025 01:52:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>My Project</title>
+      <link>http://localhost:1313/my-project/</link>
+      <pubDate>Fri, 18 Jul 2025 01:51:51 +0800</pubDate>
+      <guid>http://localhost:1313/my-project/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posters/logo-ethdimsum/</link>
+      <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posters/logo-ethdimsum/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posters/rebase-hackathon2023/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posters/rebase-hackathon2023/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

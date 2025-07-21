@@ -1,0 +1,40 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = 'Portfolio of Purple'
+theme = "console"
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+
+[params]
+  # Basic site information
+  description = "Personal profile and portfolio "
+  keywords = "portfolio, personal, purple, developer"
+  author = "Purple"
+
+  # main menu
+  menu.main = [
+    { name = "Gallery", url = "gallery", weight = 3 },
+  ]
+
+
+  # Theme settings
+  favicon = "/favicon.ico"
+  animateStyle = "animate-fade-up"
+  darkMode = true
+  defaultAppearance = "dark"
+
+  # Social media links
+  socialIcons = [
+  { name = "github", url = "https://github.com/ziyinlox-purple" },
+  { name = "twitter", url = "https://twitter.com/ziyinlox" }
+  ]
+
+  # Navigation links
+  navlinks = [
+    {name = "Homepage", url = "/"},
+    {name = "Posts", url = "/posts/"},
+    {name = "Posters", url = "/posters/"}
+    ]    
